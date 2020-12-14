@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Scope Lecture</title>
+</head>
+<body>
+    <h1>Scope Lecture</h1>
+
+<script>
+
+    (function() {
+        "use strict";
+
+
+        // variables defined in the global scope become properties of the window object!!!!
+
+        function hello() {
+            alert("HI!!");
+        }
+
+        var justin = "bob";
+
+    })();
+
+</script>
+
+</body>
+</html>
