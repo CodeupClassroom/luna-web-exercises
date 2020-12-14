@@ -70,31 +70,53 @@
 
 // logSomeStuff();
 
+
 // ================ Return Statement
 
 // function returnValue() {
 //     return 5;
 // }
-//
+// //
 // console.log(returnValue());
 
 // ================ Return Value vs. Definition
 
-// var x = returnValue();
-// var y = returnValue;
+// var x = returnValue(); // 5
+// var y = returnValue; // function
+
+// console.log(x);
+// console.log(y);
+
+// console.log(y());
+
 
 // ================ Arguments and Parameters
 
 // defining a parameter
 
 // function returnInput(input) {
-//     return input;
+//     return input + input;
 // }
 //
 // console.log(returnInput(4));
 // console.log(returnInput(2));
-// console.log(returnInput(false));
+// console.log(returnInput(true));
 // console.log(returnInput('bob'));
+
+// function returnAddingInput1AndInput(input1, input2) {
+//     console.log(input1);
+//     console.log(input2);
+//     return input1 + input2;
+// }
+
+// console.log(returnAddingInput1AndInput(1, 2));
+
+// console.log(returnAddingInput1AndInput(2, 2));
+
+
+
+
+
 
 // calling function without expected arguments/inputs
 
@@ -107,26 +129,74 @@
 
 // ================ Local Variables
 
-// function addTwoToInput(input) {
+// function addTwoToInput(x) {
 //     var x = 2;
-//     return x + input;
+//     return x + x;
 // }
+//
+// console.log(addTwoToInput(5));
 
 
 // ================ !! Mini-exercises !!
 
-// Write a function, returnFive, that returns the number five. No inputs should be defined.
 
 // Write a function, isFive, that takes in an input and returns the boolean value true if the passed argument is the number 5 or the string "5". Return false otherwise.
 
+function isFive(input) {
+    // function body
+    return input === 5 || input === '5'; // boolean
+    // return input == 5;
+}
+
+// console.log(isFive(5)); // true
+// console.log(isFive("5")); // true
+// console.log(isFive(4)); // false
+// console.log(isFive('bob')); // false
+
+
 // Write a function, isShortWord, that takes in a string and returns the boolean value true if the passed argument is shorter than 5 characters. Return false otherwise.
 
+function isShortWord(strInput) {
+    return strInput.length < 5;// boolean
+}
+
+// console.log(isShortWord('hi'), true); // true
+// console.log(isShortWord('every'), false); // false
+// console.log(isShortWord('everybody'), false); // false
+
+
 // Write a function, isSameLength, that takes in two string inputs and returns the boolean value true if the passed arguments are the same length. Return false otherwise.
+
+function isSameLength(str1, str2) {
+    return str1.length === str2.length; // boolean
+}
+
+// console.log(isSameLength('codeup', 'codeup'), true);
+// console.log(isSameLength('codeup', 'code'), false);
+// console.log(isSameLength('code', 'fred'), true);
+
+
 
 // Write a function, getSmallerSegment, that takes in a string and a number input. The function should return a substring of the first argument that is as many characters long as the second argument in lowercase.
 
 // example input: getSmallerSegment("Codeup", 3)
 // example output: "cod"
+
+function getSmallerSegment(strInput, segmentLength) {
+    return strInput.substring(0, segmentLength).toLowerCase(); // string
+}
+//
+// console.log(getSmallerSegment('Codeup', 3), 'cod');
+// console.log(getSmallerSegment('CODEUP', 3), 'cod');
+// console.log(getSmallerSegment('Spiderman', 1), 's');
+
+
+// Strategies to solve problems
+
+    // 1. restating the problem in your own words
+    // 2. determine the input and out data types (the requirements)
+    // 3. Writing test cases (even before you solve the problem)
+
 
 
 // ================ Function Scope
@@ -141,13 +211,16 @@
 //     var localVar = "Look, I'm Local!"; // declare a local variable
 //     alert(localVar); // localVar is accessible here
 //     alert(globalVar); // globalVar is accessible here
-//     nestedFunction();
+//     function x() {
+//         var y;
+//         alert(globalVar);
+//     }
 // }
 //
 // scopeExample();
-
+//
 // alert(localVar); // localVar is NOT accessible here and this will produce an error
-
+// alert(globalVar);
 
 // EXTRA SCOPE EXAMPLE
 
@@ -161,8 +234,11 @@
 //     return x + y;
 // }
 //
-// scopeExample2();
+// scopeExample2(5, 10);
+//
 // console.log('x: ' + x + ' y: ' + y);
+
+
 
 
 // ================ Pure Functions and Side Effects
@@ -170,9 +246,24 @@
 // // function with side effects
 // var word = "hello";
 //
+// // is this a pure function??
 // function shoutWord() {
-//     return word.toLocaleUpperCase();
+//     return word.toUpperCase();
 // }
+//
+// // impure function with a side effect (avoid if possible)
+// function changeWord() {
+//     word = 'fred';
+// }
+//
+// changeWord();
+//
+// console.log(word);
+
+// word will value of 'fred'
+
+
+
 //
 // // pure function
 // function shoutWord(word) {
@@ -197,21 +288,23 @@
 // function returnFive() {
 //     return 5;
 // }
-// addTwo is a "Higher Order Function" because it takes in other functions as arguments
-// functions that return a function are also "Higher Order Functions"
+// // addTwo is a "Higher Order Function" because it takes in other functions as arguments
+// // functions that return a function are also "Higher Order Functions"
 // function addTwo(number) {
 //     return number() + 2;
 // }
 //
 // console.log(addTwo(returnFive)); // Callback function "returnFive" is passed to addTwo
-
+//
 // console.log(addTwo(function() { // Anon function passed to addTwo()
 //     return 10;
-// }))
+// }));
 
-// other common higher order functions built in to JS: setInterval, setTimeout, map, filter, reduce, fetch
+// other common higher order functions built in to JS: setInterval, setTimeout, map, filter, reduce, forEach
 
 // ================ IIFE
+
+// what is an immediately invoked function expression????
 
 // See additional example
 
