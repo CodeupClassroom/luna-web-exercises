@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JS Objects Mini-Exercise 3</title>
+</head>
+<body>
+<script>
+    "use strict";
+
+    /*
+      Create a dog object...
+
+      The dog object should have properties for:
+        breed (string),
+        weightInPounds (number),
+        age (number),
+        color (string),
+        canBreed (boolean),
+        shotRecords (array of objects with properties for date and typeOfShot)
+
+      The dog object should have methods to:
+        bark() - will console.log "Woof!"
+        getOlder() - will increase age by 1
+        disableBreeding() - will set canBreed to false
+        vaccinate(nameOfVaccination)
+            - takes in an argument for the name of the vaccination
+              and adds a new shot with the current date to the shotRecords array
+
+     */
+
+    var dog = {
+        breed: 'Pug',
+        weightInPounds: 7,
+        age: 5,
+        color: 'brown',
+        canBreed: true,
+        shotRecords: [],
+        bark: function() {
+            console.log("Woof!");
+        },
+        getOlder: function() {
+            this.age += 1;
+        },
+        disableBreeding: function() {
+            this.canBreed = false;
+        },
+        vaccinate: function(nameOfVaccine) {
+            this.shotRecords.push({
+                typeOfShot: nameOfVaccine,
+                date: new Date()
+            });
+        }
+    };
+
+    dog.bark();
+    dog.getOlder();
+    console.log(dog.age);
+    dog.disableBreeding();
+    console.log(dog.canBreed);
+    dog.vaccinate('rabies');
+    console.log(dog.shotRecords);
+
+</script>
+</body>
+</html>
