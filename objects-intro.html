@@ -19,7 +19,10 @@
         - where arrays are good for storing lists of data, objects store related aspects of a greater structure
         - we have already used objects: String, Array, Math, Number
 
+        ['bob', 'david', 'justin', 'casey']
+
      */
+
 
 
     // Creating Objects (dog, user, forecast, dictionaryEntry, movie, post, etc.)
@@ -45,13 +48,25 @@
             // valueInDollars
 
         // var pet = {};
-        //
-        // pet.givenName = 'Sparkles';
+        // pet.givenName = prompt('Enter a pet name');
         // pet.age = 12;
         // pet.species = 'turtle';
         // pet.hasOffspring = true;
-        // pet['value-in-dollars'] = 400; // alternative syntax for assigning properties
 
+        // var pet = {
+        //     givenName: 'Sparkles',
+        //     age: 12,
+        //     species: 'turtle',
+        //     hasOffspring: true,
+        // };
+        // pet.color = 'blue';
+        //
+        // pet['eyeColor'] = 'green'; // alternative syntax for assigning properties
+        //
+        // var additionalProp = prompt('What characteristic do you want to add to your pet?');
+        // var additionalPropVal = prompt('What value do you want to set to ' + additionalProp + "?");
+        // pet[additionalProp] = additionalPropVal;
+        //
         // console.log(pet);
 
 
@@ -62,6 +77,9 @@
         //     hasOffspring: false,
         //     valueInDollars: 'priceless'
         // };
+
+        //
+        // console.log(pet2.age);
 
 
     // Peeking into an Object
@@ -79,45 +97,50 @@
 
         // console.log(pet.givenName);
 
-
-    // Removing Properties
-
-        // console.log(pet2.givenName);
-        // delete pet2.givenName;
-        // console.log(pet2.givenName);
-
+    // MINI EXERCISE 1
 
     // Nested Values
 
-        // Add the following to a pet object...
-            // altNames
-            // vitals: averageTemp, restingHeartRate, isHungry
+    // Add the following to a pet object...
+    // altNames
+    // vitals: averageTemp, restingHeartRate, isHungry
 
-        // var pet3 = {
-        //     givenName: 'Bowser',
-        //     age: 6,
-        //     species: 'dog',
-        //     hasOffspring: false,
-        //     valueInDollars: 'priceless',
-        //     altNames: [
-        //         'Bowser Boy',
-        //         'Bowser Man',
-        //         'Bowser Buddy',
-        //         'Puggle Wuggle Boy'
-        //     ],
-        //     vitals: {
-        //         averageTempDegF: 101,
-        //         averageRestingHeartRate: 80,
-        //         isHungry: true
-        //     }
-        // };
+    var pet3 = {
+        givenName: 'Bowser',
+        age: 6,
+        species: 'dog',
+        hasOffspring: false,
+        valueInDollars: 'priceless',
+        altNames: [
+            'Bowser Boy',
+            'Bowser Man',
+            'Bowser Buddy',
+            'Puggle Wuggle Boy'
+        ],
+        vitals: {
+            averageTempDegF: 101,
+            averageRestingHeartRate: 80,
+            isHungry: true
+        }
+    };
 
-        // log if Bowser is hungry
-        // log Bowser's average heartRate
-        // log Bowser's most recent alternative name
-        // change age to 7 and isHungry to false
-
-    // MINI EXERCISE 1
+    // // log if Bowser is hungry
+    // console.log(pet3.vitals.isHungry);
+    // console.log(pet3.isHungry);
+    //
+    // // access 'Bowser Man' value
+    // console.log(pet3.altNames[1]);
+    //
+    // // log Bowser's average resting heart rate
+    // console.log(pet3.vitals.averageRestingHeartRate);
+    //
+    // // log Bowser's most recent alternative name
+    // console.log(pet3.altNames.slice(-1)[0]);
+    // console.log(pet3.altNames[pet3.altNames.length - 1]);
+    //
+    // // change age to 7 and isHungry to false
+    // pet3.vitals.isHungry = false;
+    // console.log(pet3);
 
     // Arrays of Objects... (users)
 
@@ -136,6 +159,43 @@
         //     }
         // ];
 
+        // log all the user ages
+
+        // console.log(users[0].age);
+        // console.log(users[1].age);
+        // console.log(users[2].age);
+
+        // for (var i = 0; i < users.length; i += 1) {
+        //     console.log(users[i].age);
+        // }
+        //
+
+        // users.forEach(function(user) {
+        //     console.log(user.age);
+        // });
+        // function logUser(user) {
+        //     console.log(user.age);
+        // }
+        // users.forEach(logUser);
+
+        // function forEach(array, callback) {
+        //     for (var i = 0; i < array.length; i += 1) {
+        //         callback(array[i], i, array);
+        //     }
+        // }
+
+
+
+
+
+        // create a function that takes in an array of user objects and logs the age of all users
+        // create a function that takes in an array of user objects and doubles the age of all users
+
+        // users.forEach(function(user) {
+        //     user.age *= 2;
+        // });
+        //
+        // console.log(users);
 
 
 
@@ -144,6 +204,10 @@
 
     // Assigning Functionality to an Object
 
+        // function run() {
+        //     console.log('Running!');
+        // }
+        //
         // var pet4 = {
         //     givenName: "Pickles",
         //     age: 20,
@@ -153,8 +217,27 @@
         //     },
         //     gallop: function() {
         //         console.log("THUNK THUMP...THUNK THUMP!");
-        //     }
+        //     },
+        //     move: run
         // };
+
+
+        // var game = {
+        //     round: 0,
+        //     isRunning: false,
+        //     startGame: function() {
+        //         // starts game
+        //     },
+        //     nextRound: function() {
+        //
+        //     }
+        // }
+
+        // pet4.gallop();
+        // pet4.eat('carrots');
+        // pet4.move();
+
+
         //
         // pet4.eat("carrots");
         // pet4.gallop("carrots");
@@ -162,21 +245,41 @@
 
     // The this Keyword
 
+    // function getOlder(yearsToAdd) {
+    //     this.age += yearsToAdd;
+    // }
+    //
     // var pet6 = {
     //     name: "Sparky",
     //     age: 3,
-    //     getOlder: function() {
-    //         console.log(this.age);
-    //         this.age += 1;
+    //     getOlder: getOlder,
+    //     getYounger: function(yearsToTakeAway) {
+    //         this.age -= yearsToTakeAway;
     //     }
     // };
     //
+    // var user = {
+    //     age: 33,
+    //     getOlder: getOlder
+    // }
+    //
+    // console.log(pet6.age);
+
     // console.log(pet6.age);
     // pet6.getOlder();
     // console.log(pet6.age);
 
 
     // MINI EXERCISE 3
+
+
+    // =========================== ADDITIONAL TOPICS
+
+    // Removing Properties
+
+    // console.log(pet2.givenName);
+    // delete pet2.givenName;
+    // console.log(pet2.givenName);
 
 
     // Copying an Object Reference
