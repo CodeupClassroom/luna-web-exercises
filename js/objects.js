@@ -121,6 +121,32 @@
      * > console.log(books[0].author.lastName) // "Adams"
      */
 
+
+    var books = [
+        {
+            title: 'Title 1',
+            author: {
+                firstName: 'John1',
+                lastName: 'Smith1'
+            }
+        },
+        {
+            title: 'Title 2',
+            author: {
+                firstName: 'John2',
+                lastName: 'Smith2'
+            }
+        },
+        {
+            title: 'Title 3',
+            author: {
+                firstName: 'John3',
+                lastName: 'Smith3'
+            }
+        }
+    ];
+
+
     /**
      * TODO:
      * Loop through the books array and output the following information about
@@ -145,6 +171,45 @@
      *      ---
      *      ...
      */
+    // console.log('Book # 1');
+    // console.log('Title: ' + books[0].title);
+    // console.log('Author: ' + books[0].author.firstName + ' ' + books[0].author.lastName);
+    // console.log('---');
+    //
+    // console.log('Book # 2');
+    // console.log('Title: ' + books[1].title);
+    // console.log('Author: ' + books[1].author.firstName + ' ' + books[1].author.lastName);
+    // console.log('---');
+    //
+    // console.log('Book # 3');
+    // console.log('Title: ' + books[2].title);
+    // console.log('Author: ' + books[2].author.firstName + ' ' + books[2].author.lastName);
+    // console.log('---');
+
+
+    // for (var i = 0; i < books.length; i += 1) {
+    //     var bookNumber = i + 1;
+    //     console.log('Book # ' + bookNumber);
+    //     console.log('Title: ' + books[i].title);
+    //     console.log('Author: ' + books[i].author.firstName + ' ' + books[i].author.lastName);
+    //     console.log('---');
+    // }
+
+    // books.forEach(function(book, index) {
+    //     var bookNumber = index + 1;
+    //     console.log('Book # ' + bookNumber);
+    //     console.log('Title: ' + book.title);
+    //     console.log('Author: ' + book.author.firstName + ' ' + book.author.lastName);
+    //     console.log('---');
+    // });
+
+    // books.forEach(function(book, index, booksArr) {
+    //     booksArr[index] = index + 1;
+    // });
+    //
+    // console.log(books);
+
+
 
     /**
      * Bonus:
@@ -156,5 +221,38 @@
      *   outputs the information described above. Refactor your loop to use your
      *   `showBookInfo` function.
      */
+
+    function createBook(title, author) {
+        var nameArr = author.split(' ');
+        var firstName = nameArr[0];
+        var lastName = nameArr[1];
+        return {
+            title: title,
+            author: {
+                firstName: firstName,
+                lastName: lastName
+            }
+        }
+    }
+
+    // you could use the createBook function to combine information in multiple arrays together...
+
+    var booksUsingFunction = [];
+
+    var titles = ['Title 1', 'Title 2', 'Title 3'];
+    var authors = ['John1 Smith1', 'John2 Smith2', 'John3 Smith3'];
+
+    for (var i = 0; i < titles.length; i += 1) {
+        booksUsingFunction.push(createBook(titles[i], authors[i]));
+    }
+
+    function showBookInfo(book, bookNumber) {
+        console.log('Book # ' + (bookNumber + 1));
+        console.log('Title: ' + book.title);
+        console.log('Author: ' + book.author.firstName + ' ' + book.author.lastName);
+        console.log('---');
+    }
+
+    books.forEach(showBookInfo);
 
 })();
