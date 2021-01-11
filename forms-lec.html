@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Forms Lecture</title>
+</head>
+<body>
+    <form method="get" action="https://request-inspector.glitch.me/">
+
+        <label for="username">Enter Your Username: </label>
+        <input id="username" name="username" type="text" placeholder="Insert Your Username" value="Hippopotamus" disabled>
+        <br>
+
+        <label for="password">Password</label>
+        <input id="password" name="password" type="password">
+        <br>
+
+        <label for="comment">Comment Here:</label>
+        <br>
+        <textarea name="comment" id="comment" cols="30" rows="10">Tell me about your day!</textarea>
+        <br>
+
+        <input name="newsletter" id="newsletter" type="radio" value="sign 'em up" checked>
+        <label for="newsletter">Would you like to learn about more insane deals from Jeff's Electronics?!</label>
+        <input name="newsletter-no" id="newsletter-no" type="radio" value="no way jose">
+        <label for="newsletter-no">Would you like to never hear from Jeff's Electronics again?!</label>
+        <br>
+
+        <label for="videoGameConsole">What console were you most excited to own over the holiday season?</label>
+        <select name="console" id="videoGameConsole">
+            <option value="">- please select -</option>
+            <option value="switch">Nintendo Switch</option>
+            <option value="xbox">Xbox Series X</option>
+            <option value="playstation">PlayStation 5</option>
+        </select>
+        <br>
+
+        <input type="hidden" name="hidden-val" value="7899">
+
+        <button type="submit">SUBMIT</button>
+    </form>
+</body>
+</html>
