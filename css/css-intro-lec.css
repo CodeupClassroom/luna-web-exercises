@@ -1,0 +1,29 @@
+/* single line */
+
+h1 {
+    color: lightcoral;
+    text-decoration: underline darkblue;
+}
+
+/*
+
+The silly box I built
+Ain't it pretty?
+
+*/
+
+div {
+    height: 400px;
+    width: 150px;
+    background-color: forestgreen;
+    box-shadow: -10px 10px hotpink;
+}
+
+.salutations {
+    color: darkolivegreen;
+    text-decoration: overline;
+}
+
+.cena {
+    width: 250px;
+}
