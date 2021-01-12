@@ -1,0 +1,57 @@
+h1#welcome {
+    color: red;
+}
+
+.fancy-header {
+    background-color: navy;
+}
+
+.green-text {
+    color: green;
+}
+
+.black-bg {
+    background-color: black;
+}
+
+h1.green-text {
+    color: mediumspringgreen;
+}
+
+h2.fancy-header {
+    color: yellowgreen;
+}
+
+h2, li {
+    color: rebeccapurple;
+    text-decoration: overline;
+}
+
+section>p {
+    color: crimson;
+}
+
+article p {
+    text-decoration: underline darkred;
+}
+
+a:link {
+    color: blueviolet;
+}
+
+a:visited {
+    color: black;
+}
+
+a:hover {
+    background-color: black;
+    color: white;
+}
+
+a:active {
+    color: #EEFF00;
+}
+
+h1 {
+    color: chocolate;
+}
