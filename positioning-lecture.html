@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Positioning Lecture</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style type="text/css">
+
+        /*
+            POSITIONING
+
+                1) Static - default
+                2) Relative - can move elements up and down visually, still in document flow
+                3) Absolute - taken out of document flow and relative to its relative parent
+                4) Fixed - taken out of the document flow
+        */
+
+        body {
+            background-color: black;
+            margin: 0;
+        }
+        .container {
+            background-color: lightgray;
+            min-height: 2000px;
+            width: 600px;
+            margin: 20px auto;
+            position: relative;
+        }
+        .box1 {
+            height: 150px;
+            width: 150px;
+            background: green;
+            position: fixed;
+            top: 0;
+        }
+        .box2 {
+            height: 200px;
+            width: 200px;
+            background: blue;
+        }
+        span {
+            color: lightgray;
+            font-size: 2em;
+            font-family: sans-serif;
+        }
+        p {
+            /*z-index: 2;*/
+            /*position: relative;*/
+        }
+
+    </style>
+</head>
+<body>
+<main class="container">
+    <div class="box1">
+        <span>Box 1</span>
+    </div>
+    <div class="box2">
+        <span>Box 2</span>
+    </div>
+    <p>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Blanditiis consequuntur dolorem doloremque ea, eaque
+        ex incidunt inventore minus mollitia praesentium quo quos repellat voluptas. Aliquid asperiores assumenda aut
+        blanditiis cupiditate deleniti distinctio ea exercitationem fugit illo in incidunt labore nam nesciunt provident
+        quaerat quam qui, repellendus sed similique vel voluptatem?
+    </p>
+</main>
+</body>
+</html>
