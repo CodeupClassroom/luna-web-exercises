@@ -1,0 +1,18 @@
+#title{
+    display: inline-block;
+    padding: 300px 25px 0 300px;
+    border-radius: 50px;
+    color: whitesmoke;
+    background: black;
+    text-shadow: 2px 2px darkcyan;
+    box-shadow: 5px 5px 5px black;
+    font-size: 72px;
+    position: absolute;
+    top: -345px;
+    left: -285px;
+}
+
+body{
+    font-family: 'Yellowtail', cursive;
+    background: url("../img/hercule.png") no-repeat fixed;
+}
