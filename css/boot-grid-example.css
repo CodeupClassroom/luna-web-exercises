@@ -1,0 +1,12 @@
+body {
+    background: #bec4c4;
+    font-family: 'Slabo 27px', serif;
+}
+
+i {
+    font-size: 2em;
+}
+
+.bg-custom {
+    background: #2C333D;
+}
