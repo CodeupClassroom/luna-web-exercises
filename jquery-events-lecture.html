@@ -1,0 +1,150 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>DOM Lecture</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Metal+Mania&display=swap" rel="stylesheet">
+    <style>
+        body {
+            background: #eee;
+            min-height: 1800px;
+        }
+        #override-bootstrap{
+            background-color: #28a745;
+        }
+        #main-title{
+            color: white;
+        }
+    </style>
+</head>
+<body>
+<header class="container">
+    <div id="override-bootstrap" class="jumbotron">
+        <h1 id="main-title" class="text-center">The Event Emporium</h1>
+    </div>
+</header>
+<main class="container">
+
+    <section class="row">
+        <div class="col">
+            <h2>Some Table</h2>
+            <table class="table">
+                <thead>
+                <tr>
+                    <th>#</th>
+                    <th>First</th>
+                    <th>Last</th>
+                    <th>Handle</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr class = "jqClass">
+                    <td>1</td>
+                    <td>Mark</td>
+                    <td>Otto</td>
+                    <td>@mdo</td>
+                </tr>
+                <tr class = "jqClass">
+                    <td>2</td>
+                    <td>Jacob</td>
+                    <td>Thornton</td>
+                    <td>@fat</td>
+                </tr>
+                <tr class = "jqClass">
+                    <td>3</td>
+                    <td>Larry</td>
+                    <td>the Bird</td>
+                    <td>@twitter</td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="col">
+            <h2>Some List</h2>
+            <ul class="list-group">
+                <li class="list-group-item jqClass">Cras justo odio</li>
+                <li class="list-group-item jqClass">Dapibus ac facilisis in</li>
+                <li class="list-group-item jqClass">Morbi leo risus</li>
+                <li class="list-group-item jqClass">Porta ac consectetur ac</li>
+                <li class="list-group-item jqClass">Vestibulum at eros</li>
+            </ul>
+        </div>
+    </section>
+    <hr>
+    <section class="row">
+        <div class="col-12">
+            <h2>Some Items</h2>
+        </div>
+        <div class="col-md-3 d-flex align-items-stretch mb-3">
+            <div class="card jqClass">
+                <img src="img/question.png" alt="" class="card-img-top img-fluid">
+                <div class="card-body">
+                    <h3 class="card-title">Card </h3>
+                    <p class="card-text">Look at me!</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3 d-flex align-items-stretch mb-3">
+            <div class="card jqClass">
+                <img src="img/question.png" alt="" class="card-img-top img-fluid">
+                <div class="card-body">
+                    <h3 class="card-title">Card </h3>
+                    <p class="card-text">No ME!</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3 d-flex align-items-stretch mb-3">
+            <div class="card jqClass">
+                <img src="img/question.png" alt="" class="card-img-top img-fluid">
+                <div class="card-body">
+                    <h3 class="card-title">Card </h3>
+                    <p class="card-text">But I'm the best!</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3 d-flex align-items-stretch mb-3">
+            <div class="card jqClass">
+                <img src="img/question.png" alt="" class="card-img-top img-fluid">
+                <div class="card-body">
+                    <h3 class="card-title">Card </h3>
+                    <p class="card-text"><-- lies</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <hr>
+    <section class="row">
+        <div class="col">
+            <h2>Some Form</h2>
+            <form action="" method="POST" name="user">
+                <div class="form-group">
+                    <label for="first">First Name</label>
+                    <input class="form-control" type="text" name="first" id="first" placeholder="Enter First Name">
+                </div>
+                <div class="form-group">
+                    <label for="last">Last Name</label>
+                    <input class="form-control" type="text" name="last" id="last" placeholder="Enter Last Name">
+                </div>
+                <div class="form-group">
+                    <label for="handleField">Handle</label>
+                    <input class="form-control" type="text" name="handleField" id="handleField" placeholder="Enter Handle">
+                </div>
+                <button type="button" class="btn btn-primary btn-block" id="submitBtn">Submit</button>
+            </form>
+        </div>
+    </section>
+</main>
+
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+<script src="js/jquery-events-lecture.js"></script>
+
+
+</body>
+</html>
