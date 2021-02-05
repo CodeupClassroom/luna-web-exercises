@@ -1,0 +1,18 @@
+# Ajax
+
+- Context / what is this? Why is it popular?
+- JSON as a data interchange format
+- Data flow: DB -(SQL)> backend -(JSON)> frontend -(JS/HTML)> user
+- Requests + Responses
+    - `$.ajax`
+    - `$.get` (`$.post`)
+- Note: for the exercises, we'll send requests to a `.json` file to simulate a web server's response
+- Demo
+    - Simple example: https://ajax-demo.zach.wiki
+    - [Diagrams](https://docs.google.com/presentation/d/11Xy5ENnVNG1gAC1m7_LwYcCsuuXyMYlGL9MHi5SA8LI/edit?usp=sharing)
+    - More complex example: https://ajax-demo.zach.wiki/featured-items
+    - (if time) `coffee.json`
+- Additional Exercises
+    - Show a "loading..." message when the request is sent. This message should dissapear once the response has been received.
+    - Play with the [star wars api](https://swapi.dev/)
+    - Search and find other public APIs that you can interact with
