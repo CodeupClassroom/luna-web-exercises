@@ -1,7 +1,10 @@
 # Ajax
 
 - Context / what is this? Why is it popular?
-- JSON as a data interchange format
+    - AJAX: Asynchronous JavaScript and XML
+        - These days JSON is way more popular
+    - SPA: Single Page Application
+- JSON as a *data interchange format*
 - Data flow: DB -(SQL)> backend -(JSON)> frontend -(JS/HTML)> user
 - Requests + Responses
     - `$.ajax`

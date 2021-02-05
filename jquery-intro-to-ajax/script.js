@@ -1,24 +1,24 @@
-function handleResponse(data) {
-  console.log("All done!")
-  const date = data.date
-  const ip = data.ip
-  const time = data.time
-
-  $('#time').text(time)
-  $('#date').text(date)
+function handleResponse(items) {
+    let html = "";
+    console.log("items (api response):")
+    console.log(items)
+    items.forEach(function(item) {
+        // generate html for this item
+        let itemHtml = '<div class="col-sm-6">'
+        itemHtml += '<h2>' + item.name + '</h2>';
+        itemHtml += '<p>' + item.description + '</p>';
+        itemHtml += '<p>Price: $' + item.price + '</p>';
+        itemHtml += '</div>';
+        console.log('inside forEach loop, itemHtml:')
+        console.log(itemHtml);
+        html += itemHtml;
+    });
+    console.log('finished the forEach loop, html:')
+    console.log(html);
+    $('#items').html(html);
 }
 
-function handleError(error) {
-  console.error("Error!")
-  console.log(error)
-  console.log(error.state())
-}
+// $.get("coffee.json")
 
-function updateDateAndTime() {
-  $.get("https://ajax-demo.zach.wiki")
-    .done(handleResponse)
-    .error(handleError);
-}
-
-$('#update-btn').click(updateDateAndTime);
-
+$.get('https://ajax-demo.zach.wiki/featured-items')
+    .done(handleResponse);
