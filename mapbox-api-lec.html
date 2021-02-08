@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Mapbox API Introduction!</title>
+    <script src='https://api.mapbox.com/mapbox-gl-js/v2.0.1/mapbox-gl.js'></script>
+    <link href='https://api.mapbox.com/mapbox-gl-js/v2.0.1/mapbox-gl.css' rel='stylesheet' />
+    <style>
+        #zoo-heading {
+            color: LIME;
+        }
+    </style>
+</head>
+<body>
+    <div id='mapbox-map' style='width: 120vh; height: 70vh; margin: 15vh auto; border: 5px solid saddlebrown;'></div>
+    <script src="js/keys.js"></script>
+    <script src="js/geocode-utils.js"></script>
+    <script>
+        /**
+         * What are we going to learn today?
+         * ---------------------
+         * How we can prevent API Keys from being pushed to GitHub ~
+         * How to navigate the MapBox API Documentation ~
+         * How to create a map using the MapBox API ~
+         * How to add controls to a map ~
+         * How to add a marker to a map ~
+         * How to add multiple markers to a map ~
+         * How to add a pop up text box to a marker ~
+         * */
+        mapboxgl.accessToken = mapboxToken;
+        var map = new mapboxgl.Map({
+            container: 'mapbox-map',
+            style: 'mapbox://styles/mapbox/streets-v11', // stylesheet location
+            center: [-98.49, 29.42], // starting position [lng, lat]
+            zoom: 12 // starting zoom
+        });
+
+        // Add zoom and rotation controls to the map.
+        map.addControl(new mapboxgl.NavigationControl());
+
+        // create the popup
+        var popup = new mapboxgl.Popup({ offset: 25 }).setHTML(
+            '<h1 id="zoo-heading">The San Antonio Zoo has a little choo choo train, and some sick (as in radical) Secretary Birds.</h1>'
+        );
+
+        // Adding a marker to the map
+        var marker = new mapboxgl.Marker()
+            .setLngLat([-98.4737, 29.4624])
+            .setPopup(popup)
+            .addTo(map);
+
+        geocode("600 Navarro St #600, San Antonio, TX 78205", mapboxToken).then(function (data) {
+            var codeupMarker = new mapboxgl.Marker()
+                .setLngLat(data)
+                .addTo(map);
+        });
+
+        reverseGeocode({lat: 29.8829, lng: -97.9443}, mapboxToken).then(function (data) {
+            console.log(data);
+        })
+
+    </script>
+</body>
+</html>
