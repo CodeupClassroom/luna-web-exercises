@@ -5,6 +5,7 @@
     <title>Mapbox API Introduction!</title>
     <script src='https://api.mapbox.com/mapbox-gl-js/v2.0.1/mapbox-gl.js'></script>
     <link href='https://api.mapbox.com/mapbox-gl-js/v2.0.1/mapbox-gl.css' rel='stylesheet' />
+    <link rel="stylesheet" href="https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v4.5.1/mapbox-gl-geocoder.css" type="text/css">
     <style>
         #zoo-heading {
             color: LIME;
@@ -15,6 +16,7 @@
     <div id='mapbox-map' style='width: 120vh; height: 70vh; margin: 15vh auto; border: 5px solid saddlebrown;'></div>
     <script src="js/keys.js"></script>
     <script src="js/geocode-utils.js"></script>
+    <script src="https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v4.5.1/mapbox-gl-geocoder.min.js"></script>
     <script>
         /**
          * What are we going to learn today?
@@ -49,15 +51,24 @@
             .setPopup(popup)
             .addTo(map);
 
-        geocode("600 Navarro St #600, San Antonio, TX 78205", mapboxToken).then(function (data) {
+        geocode("600 Navarro St #600, San Antonio, TX 78205", MAPBOX_TOKEN).then(function (data) {
             var codeupMarker = new mapboxgl.Marker()
                 .setLngLat(data)
                 .addTo(map);
         });
 
-        reverseGeocode({lat: 29.8829, lng: -97.9443}, mapboxToken).then(function (data) {
+        reverseGeocode({lat: 29.8829, lng: -97.9443}, MAPBOX_TOKEN).then(function (data) {
             console.log(data);
         })
+
+        var geocoder = new MapboxGeocoder({
+                accessToken: mapboxgl.accessToken,
+                mapboxgl: mapboxgl
+            });
+
+        map.addControl(geocoder);
+
+        console.log(geocoder);
 
     </script>
 </body>
