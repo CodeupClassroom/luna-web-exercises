@@ -13,14 +13,15 @@
 
 // var vs. let vs. const
 
+
 // {
 //     var a = 10;
 // }
-
+//
 // {
 //     let b = 20;
 // }
-
+//
 // {
 //     const c = 30;
 // }
@@ -37,13 +38,21 @@
 // c = 3;
 // console.log(c);
 
+// let c = 30;
+// c = 3;
+// console.log(c);
 
 // constants and let can't be redeclared in the same scope
+
+// let x = 2;
+// let x = 1;
 
 // const c = "bob";
 
 // Use constants for everything you can and let for everything else. Don't use var.
 
+// const one = 1;
+// const first = one;
 
 // ============== Template Strings
 
@@ -53,6 +62,9 @@
 
 // let firstName = "Ron";
 // let lastName = "Swanson";
+
+
+
 // const amount = 30;
 // console.log(`You have $${amount}.00`);
 //
@@ -68,10 +80,24 @@
 //
 // console.log(easierQuote);
 
+
+// ES5
+// var name = "Justin";
+// var message = "Hello, " + name + ".";
+// console.log(message);
+
+// ES6
+// let name = "Justin";
+// let message = `Hello, ${name}. My favorite number is ${3 + 7 * 2}`;
+// console.log(message);
+
+
+// Can we only backticks? !!!!!!!!!!!!!!!!!!!!!!!!!!
+
 // Very helpful for building HTML with JS
 
 // let items = ['apple', 'grape', 'orange'];
-//
+// //
 // let itemsHtml = `
 //     <ul>
 //         <li>${items[0]}</li>
@@ -79,13 +105,28 @@
 //         <li>${items[2]}</li>
 //     </ul>
 // `;
-//
-// console.log(itemsHtml);
+// let itemsHtml2 = `
+//     <ul>
+//         <li>${items[0]}</li>
+//         <li>${items[1]}</li>
+//         <li>${items[2]}</li>
+//     </ul>
+// `;
+
+
+// console.log(itemsHtml + itemsHtml2);
 // document.write(itemsHtml);
 
 // ============== for ..of loop (works on node lists!!!)
 
+// What loops?
+
+//
 // const numbers = ["one", "two", "three"];
+//
+// for (let number of numbers) {
+//     console.log(number);
+// }
 
 // const people = [
 //     {
@@ -125,48 +166,80 @@
 
 // // TODO: Refactor the following code to use ES6 syntax. The output should stay the same.
 //
-// var message = '';
-// var names = ['John', 'Paul', 'George', 'Ringo'];
-// for (var i = 0; i < names.length; i += 1) {
-//     message += 'Hello, ' + names[i] + '\n';
+// let message = '';
+// const names = ['John', 'Paul', 'George', 'Ringo'];
+// for (let name of names) {
+//     message += `Hello, ${name}\n`;
 // }
 // console.log(message);
 
 
 
 // ============== Arrow Functions
-
-// function declaration
+//
+// // function declaration
 //     function addOne(arg1) {
 //         return arg1 + 1;
 //     }
-
-// original function expression
+//
+// // original function expression
 //     const addOneA = function(arg1) {
 //         return arg1 + 1;
 //     };
-
-// refactor to use arrow functions
+//
+// // refactor to use arrow functions
 //     const addOneB = (arg1) => {
 //         return arg1 + 1;
 //     };
-
-// removed curly braces (if only one statement)
+//
+// // removed curly braces (if only one statement)
 //     const addOneC = (arg1) => arg1 + 1;
-
-// removed parens if one input only
+//
+// // removed parens if one input only
 //     const addOneD = arg1 => arg1 + 1;
+//
+//
+// // console.log(addOneA(2));
+// // console.log(addOneB(2));
+// // console.log(addOneC(2));
+// // console.log(addOneD(2));
+//
+//
+// const addNums = function(num1, num2) {
+//     return num1 + num2;
+// };
+//
+// const addNumsEs6 = (num1, num2) => num1 + num2;
+//
+// // console.log(addNumsEs6(2, 2));
+//
+//
+//
+//
+//
+//
+//
+//
+//
 
 
-// console.log(addOneA(2));
-// console.log(addOneB(2));
-// console.log(addOneC(2));
-// console.log(addOneD(2));
+
+// const addNames = function (fName, lName) {
+//     return `${fName} ${lName}`;
+// };
+//
+// const addNamesEs6 = (fName, lName) => `${fName} ${lName}`;
 
 
-/*const addNames = function (fName, lName) {
-    return `${fName} ${lName}`;
-};*/
+
+
+
+
+
+
+
+
+
 
 // const addNames = (fName, lName) => `${fName} ${lName}`;
 //
@@ -190,6 +263,7 @@
 //         }
 //         return num1 + num2;
 //     };
+//     console.log(addArgsA(3));
 
 // Shorter ES5 approach
 //     let addArgsB = (num1, num2) => {
@@ -221,13 +295,28 @@
 // console.log(addArgsC(3, 3));
 
 
+// function sayHello(name = "Luna") {
+//     console.log('Hello, ' + name);
+// }
+
+// const sayHello = (name = "Luna") => {
+//     console.log(`Hello, ${name}`);
+// }
+//
+// sayHello("Justin");
+
+
 // ============== Object Assignment Shorthand
+
+// variables -> object
+// object -> variables
+
 
 // variables to build object from...
 
 // let breed = "Pug";
 // let age = 3;
-// let name = "Lexie";
+// let name = "Bowser";
 // let isCute = true;
 
 // ES5 way...
@@ -249,33 +338,56 @@
 //     name,
 //     isCute
 // };
-// //
-// console.log(dog.name);
+//
+
+// const username = "jreich";
+// const password = "goodpassword";
+// const email = "justin@email.com";
+
+// ES5
+// const user = {
+//     username: username,
+//     password: password,
+//     email: email
+// };
+
+// ES6
+// const user = {
+//     username,
+//     password,
+//     email
+// };
+//
+// console.log(user);
 
 
 // ============== Object / Array Destructuring
 
 // object to destructure...
-
-// const puppy = {
-//     breed: "Lab",
-//     age: 10,
-//     name: "Sabrina",
-//     isCute: true
-// };
+//
+const puppy = {
+    breed: "Lab",
+    age: 10,
+    fName: "Sabrina",
+    isCute: true
+};
 
 // let breed = puppy.breed;
 // let age = puppy.age;
-// let name = puppy.name;
+// let fName = puppy.fName;
 // let isCute = puppy.isCute;
 
-// let { breed, age, name, isCute } = puppy;
-//
-//
+// let { age, isCute, breed } = puppy;
 // //
 // console.log(breed);
 // console.log(age);
-// console.log(name);
+// console.log(isCute);
+
+
+// //
+// console.log(breed);
+// console.log(age);
+// console.log(fName);
 // console.log(isCute);
 
 //
