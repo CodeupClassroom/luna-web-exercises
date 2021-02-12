@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Open Weather Map Playground Time</title>
+</head>
+<body>
+    <script src="js/jquery-3.5.1.js"></script>
+    <script src="js/keys.js"></script>
+    <script>
+        // Two ways to query the API:
+        // 1. With a string!
+        $.get("https://api.openweathermap.org/data/2.5/onecall?lat=29.4241&lon=-98.4936&units=imperial&exclude=minutely,hourly&appid=" + OWM_TOKEN).done(function(data) {
+            console.log(data);
+        });
+
+        // 2. With a string... AND AN OBJECT!!!
+        $.get("https://api.openweathermap.org/data/2.5/onecall", {
+            APPID: OWM_TOKEN,
+            lat: 29.4241,
+            lon: -98.4936,
+            units: "imperial",
+            exclude: "minutely, hourly"
+        }).done(function(data) {
+            console.log(data);
+        });
+    </script>
+</body>
+</html>

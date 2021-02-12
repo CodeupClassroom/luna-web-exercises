@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous" />
+</head>
+<body>
+
+    <h1 class="my-5 text-center">Please Register to Continue</h1>
+
+<div class="card p-3 container active">
+  <div class="row">
+    <div class="col-md-12">
+      <div class="form-group">
+        <label for="email">Email</label>
+        <input class="form-control" type="text" id="email" name="email" />
+      </div>
+      <div class="form-group">
+        <label for="username">Username</label>
+        <input class="form-control" type="text" id="username" name="username" />
+      </div>
+      <input class="btn btn-block btn-primary next-button" value="Next" />
+    </div>
+  </div>
+</div>
+
+<div class="card p-3 container d-none">
+  <div class="row">
+    <div class="col-md-12">
+      <div class="form-group">
+        <div class="row">
+          <div class="col-md-12">
+            <label for="password">Password</label>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-8">
+            <input class="form-control" type="password" id="password" name="password" />
+          </div>
+          <div class="col-md-4">
+            <p id="password-feedback"></p>
+          </div>
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="confirm-password">Confirm Password</label>
+        <input class="form-control" type="password" id="confirm-password" name="confirm_password" />
+      </div>
+      <input class="btn btn-block btn-primary next-button" value="Next" />
+    </div>
+  </div>
+</div>
+
+<div class="card p-3 container d-none">
+
+  <div class="row">
+    <div class="col-md-9">
+      <div class="form-group">
+        <label for="address">Address</label>
+        <input class="form-control" type="text" id="address" name="address" />
+      </div>
+    </div>
+    <div class="col-md-3">
+      <div class="form-group">
+        <label for="zip">Zip Code</label>
+        <input class="form-control" type="text" id="zip" name="zip" />
+      </div>
+    </div>
+  </div>
+
+  <div class="row">
+
+    <div class="col-md-9">
+      <div class="form-group">
+        <label for="city">City</label>
+        <input class="form-control" type="text" id="city" name="city" />
+      </div>
+    </div>
+    <div class="col-md-3">
+      <div class="form-group">
+        <label for="state">State</label>
+        <input class="form-control" type="text" id="state" name="state" />
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-12">
+      <input class="btn btn-block btn-primary" value="Sign Up!" />
+    </div>
+  </div>
+
+</div>
+
+    <div class="container my-4">
+        <p>Page <span id="current-page">1</span> of 3</p>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    <script src="script.js"></script>
+
+</body>
+</html>
