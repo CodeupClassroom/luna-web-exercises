@@ -8,16 +8,25 @@
 
     <h1>The sum is: <span id="sum-output">0</span></h1>
     <label for="number">Number</label>
-    <input id="number" type="number" name="number" min="0" max="5">
+    <input id="number" type="number" name="number" min="0" max="5" value="0">
     <button id="add-btn">Add</button>
 
     <!--  Include the CDN script for jQuery below -->
+    <script
+            src="http://code.jquery.com/jquery-2.2.4.min.js"
+            integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
+            crossorigin="anonymous"></script>
 
     <script>
         "use strict";
 
         // TODO: add the needed JS so that the number selected in the number input will be added to the number in the span
 
+        $('#add-btn').click(function() {
+            var numVal = parseInt($('#number').val());
+            var currVal = parseInt($('#sum-output').text());
+            $('#sum-output').text(numVal + currVal);
+        });
 
     </script>
 
