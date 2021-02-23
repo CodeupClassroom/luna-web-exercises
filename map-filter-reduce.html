@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Trispace:wght@500&display=swap" rel="stylesheet">
+    <style>
+        body{
+            margin: 0 auto;
+            font-family: 'Trispace', sans-serif;
+            background-color: #848487;
+        }
+        #form-container{
+            display: flex;
+            padding: 10px;
+            flex-direction: column;
+            align-items: center;
+        }
+        #cards-container{
+            width: 100%;
+            height: 100%;
+        }
+        .cards-row{
+            width: 100%;
+            max-height: 33%;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+        }
+        .card{
+            margin: 5px;
+            padding-top: 10px;
+            text-align: center;
+        }
+        .card:hover{
+            background-color: greenyellow;
+        }
+        img{
+            width: 75%;
+            height: 75%;
+        }
+        h3{
+            margin: 0;
+            padding: 10px 0;
+        }
+        form{
+            width: 30%;
+            border: #2C333D 5px solid;
+        }
+        .form-group{
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+            margin-top: 1%;
+        }
+        label{
+            margin-left: 5%;
+            padding-left: 2%;
+            font-size: 1.5em;
+        }
+        input{
+            margin-right: 5%;
+            border-radius: 5px;
+            width: 50%;
+        }
+        button{
+            margin: 10px auto;
+            width: 50%;
+            display: flex;
+            align-self: center;
+            justify-content: space-around;
+            border-radius: 5px;
+            padding: 1%;
+        }
+
+
+    </style>
+</head>
+<body>
+
+<div id="main-container">
+
+    <div id="form-container">
+        <h2>Form Fun!</h2>
+        <form action="" method="POST" name="user">
+            <div class="form-group">
+                <label for="first">First Name</label>
+                <input class="form-control" type="text" name="first" id="first" placeholder="First Name">
+            </div>
+            <div class="form-group">
+                <label for="last">Last Name</label>
+                <input class="form-control" type="text" name="last" id="last" placeholder="Last Name">
+            </div>
+            <div class="form-group">
+                <label for="role">Role</label>
+                <input class="form-control" type="text" name="role" id="role"
+                       placeholder="Your Role">
+            </div>
+            <button type="button" class="btn" id="submitBtn">Submit</button>
+        </form>
+    </div>
+
+    <div id="cards-container">
+        <div class="cards-row" id="federation">
+            <div class="card">
+                <img class="card-img" src="img/USS_Voyager.jpg" alt="USS Voyager">
+                <h3 class="card-description">USS Voyager</h3>
+            </div>
+            <div class="card">
+                <img class="card-img" src="img/USS_Enterprise_E.jpg" alt="USS Enterprise E">
+                <h3 class="card-description">USS Enterprise-E</h3>
+            </div>
+            <div class="card">
+                <img class="card-img" src="img/USS_Discovery.png" alt="USS Discovery">
+                <h3 class="card-description">USS Discovery</h3>
+            </div>
+        </div>
+        <div class="cards-row" id="klingon">
+            <div class="card">
+                <img class="card-img" src="img/Duras_Sisters_BoP.jpg"
+                     alt="Duras Sisters Bird of Prey">
+                <h3 class="card-description">Duras Sisters Bird of Prey</h3>
+            </div>
+            <div class="card">
+                <img class="card-img" src="img/Kronos_One.jpg" alt="IKV Kronos One">
+                <h3 class="card-description">IKV Kronos One</h3>
+            </div>
+            <div class="card">
+                <img class="card-img" src="img/NeghVar.jpg" alt="Negh'var">
+                <h3 class="card-description">Negh'var</h3>
+            </div>
+        </div>
+        <div class="cards-row" id="romulan">
+            <div class="card">
+                <img class="card-img" src="img/IRW_Valdore.jpg" alt="IRW Valdore">
+                <h3 class="card-description">IRW Valdore</h3>
+            </div>
+            <div class="card">
+                <img class="card-img" src="img/Haakona.jpg" alt="IRW Haakona">
+                <h3 class="card-description">IRW Haakona</h3>
+            </div>
+            <div class="card">
+                <img class="card-img" src="img/Reman_Scimitar.jpg" alt="Scimitar">
+                <h3 class="card-description">Reman Scimitar</h3>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+
+<script src="js/jquery-3.5.1.js"></script>
+<script src="js/map-filter-reduce.js"></script>
+</body>
+</html>
