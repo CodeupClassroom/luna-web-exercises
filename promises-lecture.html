@@ -25,8 +25,8 @@
 // ==================================== PROMISES ======================================
 // ====================================================================================
 
-// // Working with promises looks a lot like using AJAX in jQuery
-//
+// // // Working with promises looks a lot like using AJAX in jQuery
+// //
 // // jQuery AJAX methods
 // $.ajax('https://swapi.dev/api/people/1')
 //     .done(function(data) {
@@ -50,26 +50,52 @@
 // ============ Basic Example of Promise Creation and Handling
 
 // let goodKid = true;
-//
-// // Defining a promise
+
+// Defining a promise
 // const getCake = new Promise((resolve, reject) => {
-//     // setTimeout(() => {
+//     setTimeout(() => {
 //         if (goodKid) {
 //             resolve("Here is some cake");
 //         } else {
 //             reject("Bad. No cake. :(");
 //         }
-//     // }, 3000);
-// });
+//     }, 3000);
+// })
+
+// function giveGoodKidsCake() {
+//     const getCake = new Promise((resolve, reject) => {
+//         setTimeout(() => {
+//             if (goodKid) {
+//                 resolve("Here is some cake");
+//             } else {
+//                 reject("Bad. No cake. :(");
+//             }
+//         }, 3000);
+//     });
+//     return getCake;
+// }
+
+
+
 //
 // console.log(getCake); // promise object
-//
-// // Handling a promise (defining what will happen when either resolved or rejected)
-// getCake.then((data) => {
-//     console.log(data);
-// }).catch((err) => {
-//     console.log(err);
-// });
+
+// Handling a promise (defining what will happen when either resolved or rejected)
+// giveGoodKidsCake()
+//     .then(data => {
+//         console.log(data);
+//     })
+//     .catch(err => {
+//         console.log(err);
+//     });
+
+    // getCake.then(data => {
+    //         console.log(data);
+    // });
+    //
+    // getCake.catch(err => {
+    //     console.log(err);
+    // });
 
 // -------- MINI EXERCISE 1
 
@@ -79,8 +105,25 @@
     if the above constant is assigned to true and and rejects with the string 'Bad dog; no treat' if assigned false.
  */
 
-// TODO: handle the promise by console logging the result if resolved or rejected
+// const haveTreat = new Promise((resolve, reject) => {
+//     setTimeout(() => {
+//         if (isGoodDog) {
+//             resolve('Good dog; have treat');
+//         } else {
+//             reject('Bad dog; no treat');
+//         }
+//     }, 5000);
+// });
 
+
+// TODO: handle the promise by console logging the result if resolved or rejected
+// haveTreat
+//     .then((data) => {
+//         console.log(data);
+//     })
+//     .catch((data) => {
+//         console.error(data);
+//     });
 
 /* TODO: Refactor the promise above by wrapping the conditional logic of whether to resolve or reject
     in a setTimeout so that the promise will only resolve or reject after five seconds.
@@ -93,12 +136,28 @@
     has an identical definition as the haveTreat promise from the previous mini exercise.
  */
 
+// function trainDog(isGoodDog) {
+//     return new Promise((resolve, reject) => {
+//         setTimeout(() => {
+//             if (isGoodDog) {
+//                 resolve('Good dog; have treat');
+//             } else {
+//                 reject('Bad dog; no treat');
+//             }
+//         }, 2000);
+//     });
+// }
+
+
 /* TODO: invoke the trainDog function passing in true as and argument
     chain then and catch methods to handle the returned promise. Refactor
     to pass in false to the function.
  */
 
 
+// trainDog(true)
+//     .then(console.log)
+//     .catch(console.error);
 
 
 
@@ -111,7 +170,7 @@
 // ============ Fetch API
 
 // jQuery AJAX request example
-// $.ajax('https://swapi.co/api/people/1')
+// $.ajax('https://swapi.dev/api/people/1')
 //     .done(function(data) {
 //         console.log(data);
 //     })
@@ -121,6 +180,16 @@
 
 // Fetch API Version...
 
+// fetch('https://swapi.dev/api/people/1')
+//     .then(response => response.json())
+//     .then(data => {
+//         return fetch(data.homeworld);
+//     })
+//     .then(response => response.json())
+//     .then(data => {
+//         console.log(data.name)
+//     })
+//     .catch(console.error);
 
 // -------- MINI EXERCISE 3
 
@@ -128,21 +197,36 @@
     Log the text property of the first cat fact object. Be sure to log possible errors in a catch.
  */
 
-const catFactsURL = 'https://cat-fact.herokuapp.com/facts';
+// const catFactsURL = 'https://cat-fact.herokuapp.com/facts';
+//
+// fetch(catFactsURL)
+//     .then(response => response.json())
+//     .then(data => {
+//         console.log(data);
+//         console.log(data[0]);
+//         return data[0];
+//     })
+//     .catch(console.error);
+
 
 
 // Fetch API POST example
 
-    // fetch('https://hookb.in/eKZ0mV6k1aTr9g86Q7JM', {
+    // const username = prompt('Enter username');
+    // const password = prompt('Enter password');
+    //
+    // const config = {
     //     method: 'POST',
     //     headers: {
     //         'Content-Type': 'application/json'
     //     },
     //     body: JSON.stringify({
-    //         username: "bill",
-    //         password: "pass123"
+    //         username,
+    //         password
     //     })
-    // })
+    // };
+    //
+    // fetch('https://hookb.in/r1qpeaGVj6uzWWJVyjDz', config)
     //     .then(console.log)
     //     .catch(console.log);
 
@@ -166,13 +250,12 @@ const catFactsURL = 'https://cat-fact.herokuapp.com/facts';
 
 
 
-//  ============ NY Times Articles Based on Forecast of Current Location
+//  ============ NY Times Articles Based on Forecast of Current Location (MUST USE DIFFERENT WEATHER API)
 
     // function getForecast(coord) {
     //     return fetch(`https://cors-anywhere.herokuapp.com/https://api.darksky.net/forecast/${darkSkyAPI}/${coord.lat},${coord.lng}`)
     //         .then(res => res.json())
     // }
-    //
     //
     // function getCurrentLocation() {
     //     return new Promise(function(res, rej) {
@@ -195,7 +278,7 @@ const catFactsURL = 'https://cat-fact.herokuapp.com/facts';
     //
     // function buildWeatherHtml(articles) {
     //     return articles.reduce((accum, curr) => {
-    //         return accum += `
+    //         return accum + `
     //             <article>
     //                 <a href="${curr.web_url}">${curr.headline.main}</a>
     //             </article>
