@@ -31,16 +31,16 @@
 
 // ************** Get an element and change style on click ****************
 
-    // (function(){
-    //
-    //     let jumbotron = $('div.jumbotron');
-    //     let handler = function(event){
-    //         $(this).css('background-color', 'blue');
-    //         console.log('event fired');
-    //     }
-    //     jumbotron.click(handler);
-    //
-    // })()
+// (function(){
+//
+//     let jumbotron = $('div.jumbotron');
+//     let handler = function(event){
+//         $(this).css('background-color', 'blue');
+//         console.log('event fired');
+//     }
+//     jumbotron.click(handler);
+//
+// })()
 
 // ************** Get elements and change style on click *************
 
@@ -82,13 +82,13 @@
 // })()
 
 // ************ More dynamic background changes on click or hover *****************
-(function(){
+(function () {
     let jqElements = $('.jqClass');
     let backgroundBlue = 'lightblue';
     let backgroundReset = '';
 
-    function addClickEvents(elementsToBind){
-        let handlerBlueBckGnd = function(){
+    function addClickEvents(elementsToBind) {
+        let handlerBlueBckGnd = function () {
             elementsToBind.css('background-color', backgroundReset);
             $(this).css('background-color', backgroundBlue);
         }
@@ -100,9 +100,7 @@
 })()
 
 
-
 // ========================= Keyboard events
-
 
 
 // ************************* keyup *************************

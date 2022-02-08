@@ -12,7 +12,7 @@ function isValid(input) {
 
 function getUserNumber() {
     var userNum;
-    while(true) {
+    while (true) {
         userNum = prompt('Please enter an odd number between 1 and 50');
         if (isValid(userNum)) {
             break;

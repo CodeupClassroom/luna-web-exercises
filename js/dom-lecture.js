@@ -7,20 +7,19 @@
 
 
 //****************** getElementById - Returns a SINGLE element which matches the id given
-    // (function(){
-    //     let mainTitle = document.getElementById('main-title');
-    //     console.log(mainTitle);
-    //
-    // })()
+// (function(){
+//     let mainTitle = document.getElementById('main-title');
+//     console.log(mainTitle);
+//
+// })()
 
 
 //***************** getElementByClassName - Returns an HTMLCollection of elements sharing the same CSS class name
 
-    // (function(){
-    //     let rows = document.getElementsByClassName('row');
-    //     console.log(rows);
-    // })()
-
+// (function(){
+//     let rows = document.getElementsByClassName('row');
+//     console.log(rows);
+// })()
 
 
 //***************** getElementsByTagName - Returns an HTMLCollection of elements sharing the same TAG (ie: <p>)
@@ -28,7 +27,6 @@
 //     **We pass in a string of the tag name of the elements instead of the actual tag: <main> becomes 'main'
 //     var sections = document.getElementsByTagName('section');
 //     console.log(sections);
-
 
 
 // ************CONVERTING TO AN ARRAY****************
@@ -61,16 +59,16 @@
 
 
 // Get a SINGLE element which has a CSS class of 'row'
-    // var row = document.querySelector('.row');
-    // console.log(row);
-    //
+// var row = document.querySelector('.row');
+// console.log(row);
+//
 // NOTE: querySelector() will pick the FIRST element which matches - use wisely!
-    //
+//
 
 
 // Get ALL elements which have the matching CSS class of 'row'
-    // var rows= document.querySelectorAll('.row');
-    //     console.log(rows);
+// var rows= document.querySelectorAll('.row');
+//     console.log(rows);
 
 
 // We can stack selectors simply by putting a space in between them
@@ -90,7 +88,6 @@
 //     console.log(columns);
 
 
-
 // // ========== Direct access to form inputs
 
 //*********** The document object allows us to directly access forms in a special way
@@ -106,7 +103,6 @@
 //     },3000)
 //
 // })()
-
 
 
 // // ========== Accessing and modifying elements and properties
@@ -125,8 +121,7 @@
 //     title.innerHTML += " ...and hi Mom!";
 
 
-
- // ========== Accessing and modifying attributes
+// ========== Accessing and modifying attributes
 
 // Use hasAttribute('yourAttribute') to make sure before running the next parts
 //     var cowboy = document.getElementById('cowboy');
@@ -164,9 +159,7 @@
 // })();
 
 
-
 // ========== Accessing and modifying styles
-
 
 
 // // single style

@@ -10,6 +10,7 @@
             max-width: 768px;
             font-family: sans-serif;
         }
+
         .invisible {
             display: none;
         }
@@ -131,38 +132,38 @@
 <button id="highlight">Highlight last list items</button>
 
 <script
-  src="https://code.jquery.com/jquery-3.2.1.min.js"
-  integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
-  crossorigin="anonymous"></script>
+        src="https://code.jquery.com/jquery-3.2.1.min.js"
+        integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+        crossorigin="anonymous"></script>
 
 <!-- for the sake of easier demonstration of this exercise, we'll use inline js here as opposed to an external script. -->
 <script>
     "use strict";
-    $(document).ready(function() {
+    $(document).ready(function () {
         // button to toggle all answers
-        $('#showAnswers').click(function() {
+        $('#showAnswers').click(function () {
             $('dd').toggleClass('invisible');
         });
 
         // dts highlighted when clicked
-        $('dt').click(function() {
+        $('dt').click(function () {
             $(this).css('background-color', 'yellow');
         });
 
         // highlight the last li in each list
-        $('#highlight').click(function() {
-            $('ul').each(function() {
+        $('#highlight').click(function () {
+            $('ul').each(function () {
                 $(this).children().last().css('background-color', 'yellow');
             });
         });
 
         // list items bolded when the adjacent h3 is clicked
-        $('h3').click(function() {
+        $('h3').click(function () {
             $(this).next().children().css('font-weight', 'bold');
         });
 
         // When any list item is clicked, first li of the parent ul should have a font color of blue
-        $('li').click(function() {
+        $('li').click(function () {
             $(this).parent().children().first().css('color', 'blue');
         })
     });

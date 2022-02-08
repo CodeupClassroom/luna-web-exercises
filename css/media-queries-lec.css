@@ -18,7 +18,7 @@ nav {
     box-shadow: 0 5px 5px lightseagreen;
 }
 
-nav>ul {
+nav > ul {
     display: flex;
     list-style: none;
     align-items: center;
@@ -51,6 +51,7 @@ nav a:active {
 nav a:hover {
     color: lightseagreen;
 }
+
 article {
     margin-top: 15px;
 }
@@ -60,13 +61,16 @@ article {
         flex-direction: column-reverse;
         justify-content: center;
     }
-    nav>ul {
+
+    nav > ul {
         flex-direction: column;
         margin-bottom: 25px;
     }
+
     nav a {
         font-size: 2em;
     }
+
     p {
         font-size: 1.5em;
     }
@@ -77,6 +81,7 @@ article {
         flex-direction: column;
         justify-content: center;
     }
+
     nav li {
         margin-left: 15px;
     }

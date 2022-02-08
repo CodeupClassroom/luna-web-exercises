@@ -4,9 +4,8 @@ Note: Nothing terribly new conceptually here, just how to do things with jQuery.
 
 ## Questions
 
-- Can we use jquery methods for class manipulation in combination with css
-  frameworks like bootstrap? Yes! In fact it is extremely common to do so, and
-  bootstrap itself utilized jQuery for it's functionality a couple versions ago.
+- Can we use jquery methods for class manipulation in combination with css frameworks like bootstrap? Yes! In fact it is
+  extremely common to do so, and bootstrap itself utilized jQuery for it's functionality a couple versions ago.
 
 ## Attributes and CSS
 

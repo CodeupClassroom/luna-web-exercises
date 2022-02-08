@@ -1,4 +1,4 @@
-*{
+* {
     margin: 0;
     padding: 0;
 }
@@ -9,19 +9,21 @@ body, html {
     font-family: "Arial";
 }
 
-nav{
+nav {
     background-color: burlywood;
 }
-h2{
+
+h2 {
     padding: 10px;
 }
 
-.parent-container{
+.parent-container {
     /*overflow: auto;*/
     width: 100%;
     /*margin: 0 auto;*/
 }
-.container{
+
+.container {
     width: 250px;
     height: 250px;
     padding: 10px;
@@ -34,7 +36,7 @@ h2{
     margin: 10px auto;
 }
 
-#container{
+#container {
     width: 250px;
     height: 250px;
     padding: 10px;
@@ -47,50 +49,13 @@ h2{
     margin: 30px auto;
 }
 
-.content-box{
+.content-box {
 
 }
 
-span{
+span {
     background-color: red;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 /*.container{*/

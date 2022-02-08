@@ -36,16 +36,16 @@
         color: 'brown',
         canBreed: true,
         shotRecords: [],
-        bark: function() {
+        bark: function () {
             console.log("Woof!");
         },
-        getOlder: function() {
+        getOlder: function () {
             this.age += 1;
         },
-        disableBreeding: function() {
+        disableBreeding: function () {
             this.canBreed = false;
         },
-        vaccinate: function(nameOfVaccine) {
+        vaccinate: function (nameOfVaccine) {
             this.shotRecords.push({
                 typeOfShot: nameOfVaccine,
                 date: new Date()

@@ -1,5 +1,5 @@
 "use strict";
-(function() {
+(function () {
 
     /**
      * Audience participation: "Hey David, what's an array?"
@@ -29,25 +29,25 @@
      * Audience participation: "But David, what can I do with an array?"
      */
 
-    // We can count the length of our arrays.
+        // We can count the length of our arrays.
 
-    // console.log(instructors.length);
-    // console.log([].length);
-    // console.log([1,1,1,1,1,1,1,1,9,9,9,9,0,0,0,10000000,11,22,23,24,34,45].length);
+        // console.log(instructors.length);
+        // console.log([].length);
+        // console.log([1,1,1,1,1,1,1,1,9,9,9,9,0,0,0,10000000,11,22,23,24,34,45].length);
 
-    // Here we're console logging the length of some arrays. Note that we can use this variable with a value of an array, or an array literal.
+        // Here we're console logging the length of some arrays. Note that we can use this variable with a value of an array, or an array literal.
 
-    // We can also access the individual values held in an array. It's important to note: the elements of an array are zero indexed, meaning
-    // the first element is at index point 0, the second at index point 1, etc.
+        // We can also access the individual values held in an array. It's important to note: the elements of an array are zero indexed, meaning
+        // the first element is at index point 0, the second at index point 1, etc.
 
-    // console.log(instructors[2]);
-    // console.log([1,2,3][0]);
-    // console.log(testArray[9]);
+        // console.log(instructors[2]);
+        // console.log([1,2,3][0]);
+        // console.log(testArray[9]);
 
-    // Once again, we can access the element of an array held in a variable, or of an array literal. Notice that if we try to access an
-    // element of an array at an index larger than what the array has, we get a return of undefined.
+        // Once again, we can access the element of an array held in a variable, or of an array literal. Notice that if we try to access an
+        // element of an array at an index larger than what the array has, we get a return of undefined.
 
-    // We can use the elements of an array in many ways such as...
+        // We can use the elements of an array in many ways such as...
 
     var randomIndex = Math.floor(Math.random() * instructors.length);
 
@@ -128,15 +128,15 @@
     //     }
     // });
 
-    var numbers = [17,22,34,52,6];
+    var numbers = [17, 22, 34, 52, 6];
 
-    numbers.forEach(function(number,index) {
+    numbers.forEach(function (number, index) {
         if (index % 2 === 0) {
             console.log(number * 2);
         }
     });
 
-    for(var y = 0; y < numbers.length; y += 2) {
+    for (var y = 0; y < numbers.length; y += 2) {
         console.log(numbers[y] * 2);
     }
 
@@ -144,7 +144,7 @@
 
     var coolerArray = ["Pizza", "Sunlight", "Chris Evans"];
 
-    coolArray.forEach(function(coolThing) {
+    coolArray.forEach(function (coolThing) {
         console.log("You know what's cool? " + coolThing + ".");
     })
 

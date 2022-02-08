@@ -3,7 +3,7 @@
 function showMultiplicationTable(num) {
     // create a loop that runs 10x
     for (var i = 1; i < 11; i += 1) {
-       console.log(num + ' x ' + i + ' = ' + num * i);
+        console.log(num + ' x ' + i + ' = ' + num * i);
     }
 }
 

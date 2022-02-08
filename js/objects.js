@@ -1,4 +1,4 @@
-(function() {
+(function () {
     "use strict";
 
     /**
@@ -29,7 +29,7 @@
      * > console.log(person.sayHello()) // "Hello from Rick Sanchez!"
      */
 
-    person.sayHello = function() {
+    person.sayHello = function () {
         return 'Hello from ' + this.firstName + ' ' + this.lastName;
     }
 
@@ -66,7 +66,7 @@
     var discountAmountThreshold = 200;
     var discountPercentage = .12
 
-    shoppers.forEach(function(shopper){
+    shoppers.forEach(function (shopper) {
         // Your program will have to display a line with the...
         var shopperName = shopper.name; // name of the person
         var amountPriorToDiscount = shopper.amount; // the amount before the discount
@@ -105,7 +105,6 @@
     // shoppers.forEach(function(shopper) {
     //     console.log(shopper.name);
     // });
-
 
 
     /** TODO:
@@ -208,7 +207,6 @@
     // });
     //
     // console.log(books);
-
 
 
     /**

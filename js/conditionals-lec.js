@@ -47,7 +47,7 @@ if (outOfMilk === false) {
 
 function isItAString(parameter) {
     if (typeof parameter == "string") {
-        return "Yep, "+ parameter +" is a string."
+        return "Yep, " + parameter + " is a string."
     }
 }
 
@@ -93,9 +93,9 @@ if (outOfMilk) /* outOfMilk === true */ {
 
 function isItANumber(parameter) {
     if (typeof parameter == "number") {
-        return "Yep, "+ parameter +" is a number."
+        return "Yep, " + parameter + " is a number."
     } else {
-        return "Nope, "+ parameter +" ain't a number."
+        return "Nope, " + parameter + " ain't a number."
     }
 }
 
@@ -136,7 +136,7 @@ if (hasAGoat) {
     console.log("Milking Billie.");
 }
 
-if (!hasACow && !hasAGoat){
+if (!hasACow && !hasAGoat) {
     console.log("Going to Albertson's.");
 }
 
@@ -251,7 +251,7 @@ console.log(message);
 
 var color = prompt("What is your favorite color?").toLowerCase();
 
-switch(color) {
+switch (color) {
     case "green":
         alert("What a coincidence, that's my favorite!");
         break;
@@ -288,7 +288,7 @@ switch (animal) {
 
 var lunchMeat = prompt("What kinda meat do you like on your sandwich?").toLowerCase();
 
-switch(lunchMeat) {
+switch (lunchMeat) {
     case "olive loaf":
         alert("You are a braver man than I.");
         break;

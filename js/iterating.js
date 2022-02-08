@@ -1,4 +1,4 @@
-(function(){
+(function () {
     "use strict";
 
     /**
@@ -35,7 +35,7 @@
      * array.
      */
 
-    for(var i = 0; i < names.length; i++) {
+    for (var i = 0; i < names.length; i++) {
         console.log(names[i]);
     }
 
@@ -44,7 +44,7 @@
      * Refactor your above code to use a `forEach` loop
      */
 
-    names.forEach(function(friend) {
+    names.forEach(function (friend) {
         console.log(friend);
     });
 

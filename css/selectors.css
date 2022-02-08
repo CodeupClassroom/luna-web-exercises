@@ -20,11 +20,11 @@ em {
 
 /* selector for all elements with class="article" */
 .article {
-    clear:both;
+    clear: both;
 }
 
 /*  selector for all "anchor" elements
     that are a direct child of an element with class="article" */
-.article>a {
-    float:right;
+.article > a {
+    float: right;
 }

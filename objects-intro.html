@@ -6,7 +6,7 @@
 </head>
 <body>
 
-    <h1>Intro to Objects</h1>
+<h1>Intro to Objects</h1>
 
 <script>
     "use strict";
@@ -27,75 +27,75 @@
 
     // Creating Objects (dog, user, forecast, dictionaryEntry, movie, post, etc.)
 
-        // New Object Instance
+    // New Object Instance
 
-            // var dog = new Object();
-            // console.log(typeof dog);
+    // var dog = new Object();
+    // console.log(typeof dog);
 
 
-        // Object Literal Notation
+    // Object Literal Notation
 
-            // var cat = {};
-            // console.log(typeof cat);
+    // var cat = {};
+    // console.log(typeof cat);
 
     // Setting Properties on a Custom Object
 
-        // create a pet object that has the following properties...
-            // name
-            // age
-            // species
-            // hasOffspring
-            // valueInDollars
+    // create a pet object that has the following properties...
+    // name
+    // age
+    // species
+    // hasOffspring
+    // valueInDollars
 
-        // var pet = {};
-        // pet.givenName = prompt('Enter a pet name');
-        // pet.age = 12;
-        // pet.species = 'turtle';
-        // pet.hasOffspring = true;
+    // var pet = {};
+    // pet.givenName = prompt('Enter a pet name');
+    // pet.age = 12;
+    // pet.species = 'turtle';
+    // pet.hasOffspring = true;
 
-        // var pet = {
-        //     givenName: 'Sparkles',
-        //     age: 12,
-        //     species: 'turtle',
-        //     hasOffspring: true,
-        // };
-        // pet.color = 'blue';
-        //
-        // pet['eyeColor'] = 'green'; // alternative syntax for assigning properties
-        //
-        // var additionalProp = prompt('What characteristic do you want to add to your pet?');
-        // var additionalPropVal = prompt('What value do you want to set to ' + additionalProp + "?");
-        // pet[additionalProp] = additionalPropVal;
-        //
-        // console.log(pet);
+    // var pet = {
+    //     givenName: 'Sparkles',
+    //     age: 12,
+    //     species: 'turtle',
+    //     hasOffspring: true,
+    // };
+    // pet.color = 'blue';
+    //
+    // pet['eyeColor'] = 'green'; // alternative syntax for assigning properties
+    //
+    // var additionalProp = prompt('What characteristic do you want to add to your pet?');
+    // var additionalPropVal = prompt('What value do you want to set to ' + additionalProp + "?");
+    // pet[additionalProp] = additionalPropVal;
+    //
+    // console.log(pet);
 
 
-        // var pet2 = {
-        //     givenName: 'Rex',
-        //     age: 5,
-        //     species: 'dog',
-        //     hasOffspring: false,
-        //     valueInDollars: 'priceless'
-        // };
+    // var pet2 = {
+    //     givenName: 'Rex',
+    //     age: 5,
+    //     species: 'dog',
+    //     hasOffspring: false,
+    //     valueInDollars: 'priceless'
+    // };
 
-        //
-        // console.log(pet2.age);
+    //
+    // console.log(pet2.age);
 
 
     // Peeking into an Object
 
-        // console.log(pet);
+    // console.log(pet);
 
 
     // Accessing Properties on an Object
 
-        // console.log(pet.givenName);
-        // console.log(pet2.givenName);
-        // console.log(pet2['givenName']);
-        //
-        // pet.givenName = "Sabrina";
+    // console.log(pet.givenName);
+    // console.log(pet2.givenName);
+    // console.log(pet2['givenName']);
+    //
+    // pet.givenName = "Sabrina";
 
-        // console.log(pet.givenName);
+    // console.log(pet.givenName);
 
     // MINI EXERCISE 1
 
@@ -144,59 +144,55 @@
 
     // Arrays of Objects... (users)
 
-        // var users = [
-        //     {
-        //         givenName: 'Sam',
-        //         age: 21
-        //     },
-        //     {
-        //         givenName: 'Cathy',
-        //         age: 34
-        //     },
-        //     {
-        //         givenName: 'Karen',
-        //         age: 43
-        //     }
-        // ];
+    // var users = [
+    //     {
+    //         givenName: 'Sam',
+    //         age: 21
+    //     },
+    //     {
+    //         givenName: 'Cathy',
+    //         age: 34
+    //     },
+    //     {
+    //         givenName: 'Karen',
+    //         age: 43
+    //     }
+    // ];
 
-        // log all the user ages
+    // log all the user ages
 
-        // console.log(users[0].age);
-        // console.log(users[1].age);
-        // console.log(users[2].age);
+    // console.log(users[0].age);
+    // console.log(users[1].age);
+    // console.log(users[2].age);
 
-        // for (var i = 0; i < users.length; i += 1) {
-        //     console.log(users[i].age);
-        // }
-        //
+    // for (var i = 0; i < users.length; i += 1) {
+    //     console.log(users[i].age);
+    // }
+    //
 
-        // users.forEach(function(user) {
-        //     console.log(user.age);
-        // });
-        // function logUser(user) {
-        //     console.log(user.age);
-        // }
-        // users.forEach(logUser);
+    // users.forEach(function(user) {
+    //     console.log(user.age);
+    // });
+    // function logUser(user) {
+    //     console.log(user.age);
+    // }
+    // users.forEach(logUser);
 
-        // function forEach(array, callback) {
-        //     for (var i = 0; i < array.length; i += 1) {
-        //         callback(array[i], i, array);
-        //     }
-        // }
-
-
+    // function forEach(array, callback) {
+    //     for (var i = 0; i < array.length; i += 1) {
+    //         callback(array[i], i, array);
+    //     }
+    // }
 
 
+    // create a function that takes in an array of user objects and logs the age of all users
+    // create a function that takes in an array of user objects and doubles the age of all users
 
-        // create a function that takes in an array of user objects and logs the age of all users
-        // create a function that takes in an array of user objects and doubles the age of all users
-
-        // users.forEach(function(user) {
-        //     user.age *= 2;
-        // });
-        //
-        // console.log(users);
-
+    // users.forEach(function(user) {
+    //     user.age *= 2;
+    // });
+    //
+    // console.log(users);
 
 
     // MINI EXERCISE 2
@@ -204,43 +200,43 @@
 
     // Assigning Functionality to an Object
 
-        // function run() {
-        //     console.log('Running!');
-        // }
-        //
-        // var pet4 = {
-        //     givenName: "Pickles",
-        //     age: 20,
-        //     species: "horse",
-        //     eat: function (food) {
-        //         console.log("nom nom nom " + food);
-        //     },
-        //     gallop: function() {
-        //         console.log("THUNK THUMP...THUNK THUMP!");
-        //     },
-        //     move: run
-        // };
+    // function run() {
+    //     console.log('Running!');
+    // }
+    //
+    // var pet4 = {
+    //     givenName: "Pickles",
+    //     age: 20,
+    //     species: "horse",
+    //     eat: function (food) {
+    //         console.log("nom nom nom " + food);
+    //     },
+    //     gallop: function() {
+    //         console.log("THUNK THUMP...THUNK THUMP!");
+    //     },
+    //     move: run
+    // };
 
 
-        // var game = {
-        //     round: 0,
-        //     isRunning: false,
-        //     startGame: function() {
-        //         // starts game
-        //     },
-        //     nextRound: function() {
-        //
-        //     }
-        // }
+    // var game = {
+    //     round: 0,
+    //     isRunning: false,
+    //     startGame: function() {
+    //         // starts game
+    //     },
+    //     nextRound: function() {
+    //
+    //     }
+    // }
 
-        // pet4.gallop();
-        // pet4.eat('carrots');
-        // pet4.move();
+    // pet4.gallop();
+    // pet4.eat('carrots');
+    // pet4.move();
 
 
-        //
-        // pet4.eat("carrots");
-        // pet4.gallop("carrots");
+    //
+    // pet4.eat("carrots");
+    // pet4.gallop("carrots");
 
 
     // The this Keyword
@@ -284,30 +280,29 @@
 
     // Copying an Object Reference
 
-        // var somePet = pet4;
-        // somePet.age = 1;
-        // console.log(pet4.age);
+    // var somePet = pet4;
+    // somePet.age = 1;
+    // console.log(pet4.age);
 
 
     // Copying Object Property Values
 
-        // var petCopy = {};
-        // Object.assign(petCopy, pet4);
-        // petCopy.givenName = "Fred";
-        // console.log(pet4.givenName);
-        // console.log(petCopy.givenName);
+    // var petCopy = {};
+    // Object.assign(petCopy, pet4);
+    // petCopy.givenName = "Fred";
+    // console.log(pet4.givenName);
+    // console.log(petCopy.givenName);
 
 
     // Comparing Objects
 
-        // console.log(pet4 === petCopy);
-        // console.log(pet4 === somePet);
+    // console.log(pet4 === petCopy);
+    // console.log(pet4 === somePet);
 
 
     // Getting a List of Object Keys as an array
 
-        // console.log(Object.keys(pet4));
-
+    // console.log(Object.keys(pet4));
 
 
 </script>

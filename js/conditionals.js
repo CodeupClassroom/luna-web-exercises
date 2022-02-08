@@ -99,7 +99,6 @@ function analyzeColorSwitchWithBreak(color) {
 // alert(analyzeColor(userColor));
 
 
-
 /* ########################################################################## */
 
 /**

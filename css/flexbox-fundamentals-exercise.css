@@ -1,4 +1,6 @@
-* {box-sizing: border-box;}
+* {
+    box-sizing: border-box;
+}
 
 body {
     margin: 0;
@@ -7,7 +9,9 @@ body {
     font-family: Chalkboard, sans-serif;
 }
 
-h1 {text-align: center;}
+h1 {
+    text-align: center;
+}
 
 h2, h3 {
     padding: 0;
@@ -25,7 +29,9 @@ h2, h3 {
     width: 2em;
 }
 
-.border {border: 2px solid black;}
+.border {
+    border: 2px solid black;
+}
 
 .card {
     width: 400px;
@@ -53,6 +59,7 @@ section:nth-of-type(1) {
     align-items: center;
 
 }
+
 section:nth-of-type(1) div:last-child {
     /* enter needed declarations here */
     align-self: flex-start;
@@ -66,7 +73,7 @@ section:nth-of-type(1) div:last-child {
 
 .purple-box:nth-of-type(1) {
     /* enter needed declarations here */
-   flex-grow: 2;
+    flex-grow: 2;
 }
 
 .purple-box:nth-of-type(2) {

@@ -11,7 +11,7 @@
  */
 
 function sayHello(name) {
- return 'Hello, ' + name + '!';
+    return 'Hello, ' + name + '!';
 }
 
 /**
@@ -60,13 +60,11 @@ var random = Math.floor((Math.random() * 3) + 1);
  */
 
 function isTwo(num) {
-  return num === 2;
+    return num === 2;
 }
 
 // console.log(random);
 // console.log(isTwo(random));
-
-
 
 
 /**
@@ -88,7 +86,6 @@ function calculateTip(tipPercentage, totalBill) {
 // console.log(calculateTip(0.20, 20), 4); // returns 4
 // console.log(calculateTip(0.25, 25.50), 6.375); // returns 6.375
 // console.log(calculateTip(0.15, 33.42), 5.013); // returns 5.013
-
 
 
 /**
@@ -117,9 +114,6 @@ function numToDollars(num) {
 alert(outputMessage);
 
 console.log(tipAmountDollars);
-
-
-
 
 
 /**

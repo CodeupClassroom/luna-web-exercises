@@ -23,7 +23,7 @@ function createRandomIceCreamOrder(allCones) {
         console.log(conesToSell + ' ' + pluralOrSingularCones(conesToSell) + ' sold...'); // log conesToSell cones sold
         allCones -= conesToSell; // subtract conesToSell from allCones
     } else { // otherwise
-        console.log('Cannot sell you ' + conesToSell +  ' ' + pluralOrSingularCones(conesToSell) + ' I only have ' + allCones + '...');// log cannot sell message
+        console.log('Cannot sell you ' + conesToSell + ' ' + pluralOrSingularCones(conesToSell) + ' I only have ' + allCones + '...');// log cannot sell message
     }
     console.log(allCones + ' are left...');
     return allCones;
@@ -36,7 +36,7 @@ function runIceCreamStore() {
 
     do {
         allCones = createRandomIceCreamOrder(allCones);
-    } while(allCones > 0);
+    } while (allCones > 0);
 
     console.log('Yay! I sold them all!');
 

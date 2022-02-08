@@ -3,7 +3,7 @@
 {
     let numArr = [1, 2, 3, 4, 5, 6];
 
-    let mappedNumArr = numArr.map(function (num){
+    let mappedNumArr = numArr.map(function (num) {
         return num + num;
     });
     console.log(mappedNumArr);
@@ -12,7 +12,7 @@
 {
     let numArr = [1, 2, 3, 4, 5];
 
-    let mappedNumArr = numArr.map(function (num){
+    let mappedNumArr = numArr.map(function (num) {
         return num * num
     });
     console.log(mappedNumArr);
@@ -26,33 +26,33 @@
 //         'Chino Moreno',
 //         'Jonathan Davis'];
 
-    // let firstNames = names.map(function (name){
-    //     return name.split(' ')[0]
-    // });
-    // console.log(firstNames);
+// let firstNames = names.map(function (name){
+//     return name.split(' ')[0]
+// });
+// console.log(firstNames);
 
-    //TODO: use map to return an array where the names are ordered last-first
+//TODO: use map to return an array where the names are ordered last-first
 
-    // let newNames = names.map(function (name){
-    //     let nameArr = name.split(' ');
-    //     if (nameArr.length === 3) {
-    //         return nameArr[2] + ' ' + nameArr[1] + ' ' + nameArr[0];
-    //     }
-    //     return nameArr[1] + '' + nameArr[0];
-    // })
-    // console.log(newNames);
+// let newNames = names.map(function (name){
+//     let nameArr = name.split(' ');
+//     if (nameArr.length === 3) {
+//         return nameArr[2] + ' ' + nameArr[1] + ' ' + nameArr[0];
+//     }
+//     return nameArr[1] + '' + nameArr[0];
+// })
+// console.log(newNames);
 
-    // string[] => object[] => string[]
-    // let nameObjs = names.map(function (name){
-    //     let nameArr = name.split(' ');
-    //     return {firstName: nameArr[0], lastName: nameArr[1]};
-    // });
-    // console.log(nameObjs);
-    //
-    // let lastNames = nameObjs.map(function (name){
-    //     return name.lastName
-    // });
-    // console.log(lastNames);
+// string[] => object[] => string[]
+// let nameObjs = names.map(function (name){
+//     let nameArr = name.split(' ');
+//     return {firstName: nameArr[0], lastName: nameArr[1]};
+// });
+// console.log(nameObjs);
+//
+// let lastNames = nameObjs.map(function (name){
+//     return name.lastName
+// });
+// console.log(lastNames);
 
 // }
 
@@ -101,7 +101,7 @@
         'Sam James Lansford'
     ];
 
-    let nameArr = newNames.map(function (name){
+    let nameArr = newNames.map(function (name) {
         return name.split(' ').reverse()
     })
 }
@@ -174,7 +174,7 @@
         'Chino Moreno',
         'Jonathan Davis'];
 
-    let namesArr = nameStrings.map(function (name){
+    let namesArr = nameStrings.map(function (name) {
         return name.split(' ');
     });
 
@@ -184,7 +184,7 @@
 
     let fullNames = namesArr
 
-    let fullName = namesArr.reduce(function (a,c){
+    let fullName = namesArr.reduce(function (a, c) {
         return a + ' ' + c;
     });
     console.log(fullName);

@@ -19,7 +19,7 @@ nav {
     box-shadow: 0 5px 5px lightseagreen;
 }
 
-nav>ul {
+nav > ul {
     display: flex;
     list-style: none;
     align-items: center;
@@ -55,6 +55,7 @@ nav a:active {
 nav a:hover {
     color: lightseagreen;
 }
+
 article {
     margin-top: 15px;
     font-size: 1.5em;
@@ -64,16 +65,20 @@ article {
     nav {
         flex-direction: column;
     }
-    nav>ul {
+
+    nav > ul {
         flex-direction: row;
         margin-bottom: 0;
     }
+
     nav li {
         margin-left: 15px;
     }
+
     nav a {
         font-size: 1em;
     }
+
     article {
         font-size: 1em;
     }
@@ -84,9 +89,11 @@ article {
         flex-direction: row;
         justify-content: space-between;
     }
+
     nav li {
         margin-left: 5px;
     }
+
     main {
         box-sizing: border-box;
         padding: 0 20%

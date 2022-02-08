@@ -94,20 +94,20 @@
      * array."
      */
 
-    // Remember how with strings we were able to find the index of a pattern of characters?
+        // Remember how with strings we were able to find the index of a pattern of characters?
 
-    // console.log(removedCheese.indexOf("o"));
+        // console.log(removedCheese.indexOf("o"));
 
-    // We can also use indexOf on arrays!
+        // We can also use indexOf on arrays!
 
-    // console.log(cheeses.indexOf("Kraft American Singles"));
-    // console.log(cheeses.indexOf("Hot Dog"));
+        // console.log(cheeses.indexOf("Kraft American Singles"));
+        // console.log(cheeses.indexOf("Hot Dog"));
 
-    // Now I can locate the index of an element even if I'm not looking at it!
+        // Now I can locate the index of an element even if I'm not looking at it!
 
-    // We also have access to the lastIndexOf method.
+        // We also have access to the lastIndexOf method.
 
-    var myFavNumbers = [17,34,22,17,19,17];
+    var myFavNumbers = [17, 34, 22, 17, 19, 17];
 
     // console.log(myFavNumbers.indexOf(17));
     // console.log(myFavNumbers.lastIndexOf(17));
@@ -174,9 +174,6 @@
     csvNames = names.reverse().join(",");
 
     console.log(csvNames);
-
-
-
 
 
     // Secret time: Let's talk about joining two arrays together...

@@ -12,6 +12,5 @@
 ## `setTimeout` + `setInterval`
 
 - What is a callback function?
-- What do `setTimeout` and `setInterval` allow us to do? What are some examples
-  of this?
+- What do `setTimeout` and `setInterval` allow us to do? What are some examples of this?
 - What is the difference between `setTimeout`, `setInterval`, and `clearInterval`?

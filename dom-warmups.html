@@ -7,6 +7,7 @@
         .letter {
             cursor: crosshair;
         }
+
         .title-letter {
             color: firebrick;
             font-size: 3em;
@@ -15,64 +16,64 @@
 </head>
 <body>
 
-    <h1>
-        <span class="letter">D</span><span class="letter">O</span><span class="letter">M</span>
-        <span class="letter">W</span><span class="letter">a</span><span class="letter">r</span><span class="letter">m</span>
-        <span class="letter">U</span><span class="letter">p</span><span class="letter">s</span>
-    </h1>
+<h1>
+    <span class="letter">D</span><span class="letter">O</span><span class="letter">M</span>
+    <span class="letter">W</span><span class="letter">a</span><span class="letter">r</span><span class="letter">m</span>
+    <span class="letter">U</span><span class="letter">p</span><span class="letter">s</span>
+</h1>
 
-    <h3>Letter from title in lowercase: <span class="title-letter"></span></h3>
+<h3>Letter from title in lowercase: <span class="title-letter"></span></h3>
 
-    <h3>The sum is: <span id="sum-output">0</span></h3>
+<h3>The sum is: <span id="sum-output">0</span></h3>
 
-    <label for="number">Number</label>
-    <input id="number" type="number" name="number" min="0" max="5" value="0">
-    <button id="add-btn">Add</button>
+<label for="number">Number</label>
+<input id="number" type="number" name="number" min="0" max="5" value="0">
+<button id="add-btn">Add</button>
 
-    <!--  Include the CDN script for jQuery below -->
-    <script
-            src="http://code.jquery.com/jquery-2.2.4.min.js"
-            integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
-            crossorigin="anonymous"></script>
-    <script>
+<!--  Include the CDN script for jQuery below -->
+<script
+        src="http://code.jquery.com/jquery-2.2.4.min.js"
+        integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
+        crossorigin="anonymous"></script>
+<script>
 
-        "use strict";
+    "use strict";
 
-        // TODO: add the needed JS so that the number selected in the number input will be added to the number in the span
+    // TODO: add the needed JS so that the number selected in the number input will be added to the number in the span
 
-        $('#add-btn').click(function() {
-            var numVal = parseInt($('#number').val());
-            var currVal = parseInt($('#sum-output').text());
-            $('#sum-output').text(numVal + currVal);
-        });
+    $('#add-btn').click(function () {
+        var numVal = parseInt($('#number').val());
+        var currVal = parseInt($('#sum-output').text());
+        $('#sum-output').text(numVal + currVal);
+    });
 
-        /*
-        TODO: add the needed JS so that when the cursor hovers over a letter in the h1 title,
-         the letter will appear in the span with a class of `title-letter`, in lowercase.
-         When the cursor is not hovering over a letter in the h1 title, no letter should be
-         displayed in the span with a class of `title-letter`.
-        */
+    /*
+    TODO: add the needed JS so that when the cursor hovers over a letter in the h1 title,
+     the letter will appear in the span with a class of `title-letter`, in lowercase.
+     When the cursor is not hovering over a letter in the h1 title, no letter should be
+     displayed in the span with a class of `title-letter`.
+    */
 
-        // when hovering over the class of `letter`, log the word 'hover'
+    // when hovering over the class of `letter`, log the word 'hover'
 
-        // when hovering over the class of `letter`, log the letter
+    // when hovering over the class of `letter`, log the letter
 
-        // when hovering over the class of `letter`, make the letter appear in DOM in `title-letter`
+    // when hovering over the class of `letter`, make the letter appear in DOM in `title-letter`
 
-        // when hovering over the class of `letter`, make the letter appear in the DOM in `title-letter` in lowercase
-        // when hovering over the class of `letter`, make the letter appear in the DOM in `title-letter` in lowercase and empty when hovering out
+    // when hovering over the class of `letter`, make the letter appear in the DOM in `title-letter` in lowercase
+    // when hovering over the class of `letter`, make the letter appear in the DOM in `title-letter` in lowercase and empty when hovering out
 
-        $('.letter').hover(
-            function() {
-                var letter = $(this).text().toLowerCase();
-                $('.title-letter').text(letter);
-            },
-            function() {
-                $('.title-letter').text('');
-            }
-        );
+    $('.letter').hover(
+        function () {
+            var letter = $(this).text().toLowerCase();
+            $('.title-letter').text(letter);
+        },
+        function () {
+            $('.title-letter').text('');
+        }
+    );
 
-    </script>
+</script>
 
 </body>
 </html>

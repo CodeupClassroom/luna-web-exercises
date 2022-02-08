@@ -2,7 +2,7 @@
 // ever use one of them, multiple ways are provided for the sake of demonstration
 
 function renderHtmlWithjQuery(items) {
-    items.forEach(function(item) {
+    items.forEach(function (item) {
         // create the surrounding div
         let $div = $('<div>').addClass('col-sm-6')
 
@@ -17,7 +17,7 @@ function renderHtmlWithjQuery(items) {
 
 
 function renderHtmlWithVanillaDom(items) {
-    items.forEach(function(item) {
+    items.forEach(function (item) {
         // create the surrounding div
         let div = document.createElement('div');
         div.classList.add('col-sm-6');
@@ -36,7 +36,7 @@ function renderHtmlWithVanillaDom(items) {
 
 function renderHtmlWithStrings(items) {
     let html = "";
-    items.forEach(function(item) {
+    items.forEach(function (item) {
         // generate html for this item
         let itemHtml = '<div class="col-sm-6">'
         itemHtml += '<h2>' + item.name + '</h2>';

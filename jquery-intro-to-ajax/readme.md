@@ -16,6 +16,7 @@
     - More complex example: https://ajax-demo.zach.wiki/featured-items
     - (if time) `coffee.json`
 - Additional Exercises
-    - Show a "loading..." message when the request is sent. This message should dissapear once the response has been received.
+    - Show a "loading..." message when the request is sent. This message should dissapear once the response has been
+      received.
     - Play with the [star wars api](https://swapi.dev/)
     - Search and find other public APIs that you can interact with

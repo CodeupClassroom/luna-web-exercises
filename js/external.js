@@ -12,7 +12,6 @@
 //
 
 
-
 // ============================= Movie Rental
 // You have rented some movies for your kids: The little mermaid (for 3 days),
 // Brother Bear (for 5 days, they love it), and Hercules
@@ -58,7 +57,6 @@
 //
 // var studentEnrolled = classIsNotFull && classSchedulesCheck;
 // alert("Student enrollment status: " + studentEnrolled);
-
 
 
 // ============================= Product Offer

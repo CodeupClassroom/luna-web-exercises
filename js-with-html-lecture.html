@@ -6,53 +6,53 @@
 </head>
 <body>
 
-    <h1>JS with HTML Lecture</h1>
+<h1>JS with HTML Lecture</h1>
 
-    <!--
-        HTML WITH JS
-            JS in HTML
-            JS in external script
+<!--
+    HTML WITH JS
+        JS in HTML
+        JS in external script
 
-        CONSOLE LOGGING
+    CONSOLE LOGGING
 
-        STRICT MODE
-            - https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Strict_mode
-            - Must include from this point forward
-            - Makes JS less tolerant of sloppy code
-            - example...all variables require declaration
+    STRICT MODE
+        - https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Strict_mode
+        - Must include from this point forward
+        - Makes JS less tolerant of sloppy code
+        - example...all variables require declaration
 
-        USER INTERACTION... alert(), confirm(), prompt()
-    -->
+    USER INTERACTION... alert(), confirm(), prompt()
+-->
 
-    <!-- inline script -->
+<!-- inline script -->
 
-    <script>
+<script>
 
-        "use strict";
+    "use strict";
 
-        // *********************************************** User Interaction Functions
+    // *********************************************** User Interaction Functions
 
-        // No HTML will load until user interaction functions are finished
+    // No HTML will load until user interaction functions are finished
 
-        // -- Alert --
-        alert("Howdy, Voyageurs!");
+    // -- Alert --
+    alert("Howdy, Voyageurs!");
 
-        // -- Confirm --
-        confirm("Do you want to play a game?");
+    // -- Confirm --
+    confirm("Do you want to play a game?");
 
-        var answer = confirm("Am I right???");
+    var answer = confirm("Am I right???");
 
-        alert("For the question above, you answered: " + answer);
+    alert("For the question above, you answered: " + answer);
 
-        // -- Prompt --
-        var name = prompt("Please enter your name...");
-        alert("Hello, " + name + "!");
+    // -- Prompt --
+    var name = prompt("Please enter your name...");
+    alert("Hello, " + name + "!");
 
 
-    </script>
+</script>
 
-    <!-- external js file -->
-    <script src="js/jsHtmlLec.js"></script>
+<!-- external js file -->
+<script src="js/jsHtmlLec.js"></script>
 
 </body>
 </html>

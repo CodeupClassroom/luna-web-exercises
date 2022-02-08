@@ -336,10 +336,9 @@
 
 
 // TODO TOGETHER: Why doesnt the example above run?
-    // >> Answer: Because i < 10 is never true
+// >> Answer: Because i < 10 is never true
 
 // TODO TOGETHER: Refactor the example above using a do-while loop. What behavior do we notice?
-
 
 
 //TODO TOGETHER: Create a do-while loop that asks the user to confirm: "Would you like to exit?" What difference do you notice?
@@ -350,7 +349,6 @@
 
 
 //TODO: Create a do-while loop that prompts the user for a color and continues to prompt until the string passed is "blue"
-
 
 
 /*********************************************
